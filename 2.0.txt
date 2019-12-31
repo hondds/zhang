@@ -1,0 +1,182 @@
+import pandas as pd
+import os
+import time
+Path = 'C:\\Users\\Administrator\\Desktop\\WeeklyReport'
+NameList = ["张静宇","杨明","王译乐","郭园焘","常高波","李景峰","李留根","刘浩","刘虎",
+            "刘晓军","苗吉铠","潘振阳","申阳阳","许天顺","张艳松","郑文超","周纪先","杨现辉","李波文","胡水旺","管鹏旭","岳颖超","李硕果"]
+FileList = os.listdir(r"C:\Users\Administrator\Desktop\WeeklyReport")
+DoneList = []
+df1=pd.DataFrame()
+df2=pd.DataFrame()
+df3=pd.DataFrame()
+df4=pd.DataFrame()
+df5=pd.DataFrame()
+df6=pd.DataFrame()
+df7=pd.DataFrame()
+df8=pd.DataFrame()
+df9=pd.DataFrame()
+df10=pd.DataFrame()
+df11=pd.DataFrame()
+df12=pd.DataFrame()
+df13=pd.DataFrame()
+df14=pd.DataFrame()
+df15=pd.DataFrame()
+df16=pd.DataFrame()
+df17=pd.DataFrame()
+df18=pd.DataFrame()
+df19=pd.DataFrame()
+df20=pd.DataFrame()
+df21=pd.DataFrame()
+df22=pd.DataFrame()
+df23=pd.DataFrame()
+for file in FileList:
+    if "张静宇" in file:
+        df1 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("张静宇")
+    elif "杨明" in file:
+        df2 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("杨明")
+    elif "王译乐" in file:
+        df3 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("王译乐")
+    elif "郭园焘" in file:
+        df4 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("郭园焘")
+    elif "常高波" in file:
+        df5 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("常高波")
+    elif "李景峰" in file:
+        df6 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("李景峰")
+    elif "李留根" in file:
+        df7 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("李留根")
+    elif "刘浩" in file:
+        df8 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("刘浩")
+    elif "刘虎" in file:
+        df9 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("刘虎")
+    elif "刘晓军" in file:
+        df10 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("刘晓军")
+    elif "苗吉凯" in file:
+        df11 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("苗吉铠")
+    elif "潘振阳" in file:
+        df12 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("潘振阳")
+    elif "申阳阳" in file:
+        df13 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("申阳阳")
+    elif "许天顺" in file:
+        df14 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("许天顺")
+    elif "张艳松" in file:
+        df15 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("张艳松")
+    elif "郑文超" in file:
+        df16 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("郑文超")
+    elif "周纪先" in file:
+        df17 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("周纪先")
+    elif "杨现辉" in file:
+        df18 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("杨现辉")
+    elif "李波文"  in file:
+        df19 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("李波文")
+    elif "胡水旺" in file:
+        df20 =  pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("胡水旺")
+    elif "管鹏旭" in file:
+        df21 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("管鹏旭")
+    elif "岳颖超" in file:
+        df22 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("岳颖超")
+    elif "李硕果" in file:
+        df23 = pd.read_excel(Path +'\\'+ file,'Weekly report',header=2)
+        DoneList.append("李硕果")
+    else:
+        pass
+now = time.strftime("%Y-%m-%d-%H_%M_%S",time.localtime(time.time())) 
+writer = pd.ExcelWriter("C:/Users/Administrator/Desktop/"+ now +r'report.xlsx')
+#张静宇
+df1[35:70].to_excel(writer,'Weekly report',header=0,index=0,startrow=38)
+
+#杨明
+df2[665:700].to_excel(writer,'Weekly report',header=0,index=0,startrow=668)
+
+#王译乐
+df3[70:105].to_excel(writer,'Weekly report',header=0,index=0,startrow=73)
+
+#郭园焘
+df4[350:385].to_excel(writer,'Weekly report',header=0,index=0,startrow=353)
+
+#常高波
+df5[420:455].to_excel(writer,'Weekly report',header=0,index=0,startrow=423)
+
+#李景峰
+df6[315:350].to_excel(writer,'Weekly report',header=0,index=0,startrow=318)
+
+#李留根
+df7[385:420].to_excel(writer,'Weekly report',header=0,index=0,startrow=388)
+
+#刘浩
+df8[140:175].to_excel(writer,'Weekly report',header=0,index=0,startrow=143)
+
+#刘虎
+df9[1470:1505].to_excel(writer,'Weekly report',header=0,index=0,startrow=1473)
+
+#刘晓军
+df10[245:280].to_excel(writer,'Weekly report',header=0,index=0,startrow=248)
+
+#苗吉铠
+df11[175:210].to_excel(writer,'Weekly report',header=0,index=0,startrow=178)
+
+#潘振阳
+df12[700:735].to_excel(writer,'Weekly report',header=0,index=0,startrow=703)
+
+#申阳阳
+df13[1610:1645].to_excel(writer,'Weekly report',header=0,index=0,startrow=1613)
+
+#许天顺
+df14[210:245].to_excel(writer,'Weekly report',header=0,index=0,startrow=213)
+
+#张艳松
+df15[455:490].to_excel(writer,'Weekly report',header=0,index=0,startrow=458)
+
+#郑文超
+df16[630:665].to_excel(writer,'Weekly report',header=0,index=0,startrow=633)
+
+#周纪先
+df17[595:630].to_excel(writer,'Weekly report',header=0,index=0,startrow=598)
+
+#杨现辉
+df18[0:35].to_excel(writer,'Weekly report',header=0,index=0,startrow=3)
+
+#李波文
+df19[490:525].to_excel(writer,'Weekly report',header=0,index=0,startrow=493)
+
+#胡水旺
+df20[525:560].to_excel(writer,'Weekly report',header=0,index=0,startrow=528)
+
+#管鹏旭
+df21[735:770].to_excel(writer,'Weekly report',header=0,index=0,startrow=738)
+
+#岳颖超
+df22[105:140].to_excel(writer,'Weekly report',header=0,index=0,startrow=108)
+
+#李硕果
+df23[280:315].to_excel(writer,'Weekly report',header=0,index=0,startrow=283)
+
+writer.save()
+NotDoneList = [x for x in NameList if x not in DoneList]
+print('#'*30)
+print("统计完成！")
+print('未交周报的人有：')
+for m in NotDoneList:
+    print(m)
+print('#'*30)
